@@ -1,6 +1,39 @@
+# Pharma FullsStack ChatBot
+
+Além do backend implementei também uma interface de Chat com Vite, utilizando de comunicação em tempo real com websocket. Identidade visual baseada no logotipo da empresa. Reordenação dos contgatos mediante a chegada de mensagens utilizando ReactQuery.
+
+[Pharma Chat](https://github.com/suissa/pharma-whatsapp-frontend)
+
+Screenshots:
+
+
+### Página de entrada em dark theme
+
+![](https://i.imgur.com/uzcgOdD.png)
+
+![](https://i.imgur.com/hChCz2F.png)
+![](https://i.imgur.com/Csab4tp.png)
+
+AudioPlayer personalizadol com a marca:
+
+![](https://i.imgur.com/lDIVDqJ.jpeg)
+![](https://i.imgur.com/lDIVDqJ.jpeg)
+
+![Modal de imaghem com efeito de scale in and out](https://i.imgur.com/tJUnR6O.png)
+
+
 # Pharma WhatsApp API
 
-API para gerenciamento de sessões WhatsApp usando Baileys.
+API para gerenciamento de sessões WhatsApp usando Baileys. Implementado tambpem a integração com a OpenAI, ativada apenas por palavras-chave, as quais podem ser adicionadas via API. Prompt específico para uma atendente de Farmácia.
+
+Implementado o download, identificação e envio de todos os tipos de arquivos suportados pela Baileys, os arquivos são separados pelas seguintes categorias:
+
+![](https://i.imgur.com/IyrBR5w.jpeg)
+
+
+Implementado um MediaServer para entregar esses arquivos via Chat. Loggs via Redis.
+
+Armazenamento das mensagens recebidasz e enviadas via WhatsApp via Redis. E implementada a reconexão automática quando o servidor reinicia.
 
 ## 🚀 Setup Rápido
 
