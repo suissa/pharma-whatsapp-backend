@@ -1,0 +1,24 @@
+FROM node:18-alpine
+
+# Definir diretório de trabalho
+WORKDIR /app
+
+# Instalar dependências mínimas necessárias
+RUN npm init -y && \
+    npm install express cors redis
+
+# Copiar o servidor de mídia
+COPY ../media-server.js .
+
+# Criar diretório para downloads
+RUN mkdir -p downloads
+
+# Expor porta 3001
+EXPOSE 3001
+
+# Definir variáveis de ambiente
+ENV NODE_ENV=production
+ENV PORT=3001
+
+# Comando para iniciar o servidor
+CMD ["node", "media-server.js"] 

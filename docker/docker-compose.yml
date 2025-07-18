@@ -1,0 +1,46 @@
+services:
+  pharma-whatsapp:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    image: suissa/pharma-whatsapp:v3
+    ports:
+      - "3000:3000"
+      - "8899:8899"
+    env_file:
+      - .env       
+    environment:
+      - NODE_ENV=production
+      - RABBITMQ_URL=${RABBITMQ_URL}
+    volumes:
+      - ../.env:/app.env:ro
+    depends_on:
+      - rabbitmq
+    restart: unless-stopped
+    networks:
+      - pharma-network
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "${RABBITMQ_PORT}:5672"
+      - "${RABBITMQ_PORT_CONTAINER}:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASS}
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    restart: unless-stopped
+    networks:
+      - pharma-network
+
+
+networks:
+  pharma-network:
+    driver: bridge
+
+volumes:
+  rabbitmq_data:
+  redis_data:  
+  prometheus_data:
+  grafana_data:

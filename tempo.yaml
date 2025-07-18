@@ -1,0 +1,27 @@
+server:
+  http_listen_port: 3200
+
+distributor:
+  receivers:
+    otlp:
+      protocols:
+        grpc:
+
+ingester:
+  lifecycler:
+    ring:
+      kvstore:
+        store: inmemory
+  chunk_idle_period: 5m
+  chunk_retain_period: 30s
+  max_chunk_age: 1h
+
+storage:
+  trace:
+    backend: local
+    local:
+      path: /tmp/tempo
+
+compactor:
+  compaction:
+    retention_enabled: false

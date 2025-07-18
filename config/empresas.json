@@ -1,0 +1,33 @@
+{
+  "empresas": {
+    "empresa01": {
+      "numero": "5515991957645",
+      "nome": "Empresa 01",
+      "descricao": "Primeira empresa do sistema",
+      "ativa": true
+    },
+    "empresa02": {
+      "numero": "556499238287",
+      "nome": "Empresa 02", 
+      "descricao": "Segunda empresa do sistema",
+      "ativa": true
+    },
+    "empresa03": {
+      "numero": "556481348896",
+      "nome": "Empresa 03",
+      "descricao": "Terceira empresa do sistema", 
+      "ativa": true
+    }
+  },
+  "filas": {
+    "empresa01": "whatsapp.send.empresa01",
+    "empresa02": "whatsapp.send.empresa02", 
+    "empresa03": "whatsapp.send.empresa03"
+  },
+  "configuracao": {
+    "versao": "1.0.0",
+    "atualizado_em": "2025-01-14",
+    "dlq_habilitada": true,
+    "retry_maximo": 3
+  }
+} 
