@@ -14,6 +14,8 @@ Screenshots:
 ![](https://i.imgur.com/hChCz2F.png)
 ![](https://i.imgur.com/Csab4tp.png)
 
+![](https://i.imgur.com/PVDQtpH.png)
+
 AudioPlayer personalizadol com a marca:
 
 ![](https://i.imgur.com/lDIVDqJ.jpeg)
