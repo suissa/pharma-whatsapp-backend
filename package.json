@@ -18,8 +18,7 @@
     "media-server": "node media-server.js",
     "dev-all": "npm run build && concurrently \"npm start\" \"npm run media-server\"",
     "docker-up": "docker-compose up -d",
-    "docker-down": "docker-compose down",
-    "preinstall": "node preinstall.js"
+    "docker-down": "docker-compose down"
   },
   "keywords": [],
   "author": "suissa <jnascimento@gmail.com>",
